@@ -1,0 +1,7 @@
+  def count_tokens(*args)
+  tokens = args.join(" ").split(/\s/)
+  puts tokens.inspect
+  tokens.inject(Hash.new(0)) {|counts, token| counts[token] += 1; counts }
+end
+
+puts count_tokens(['Fi', 'Fee', 'Fi', 'Blah', 'Blah', 'Blah'])
